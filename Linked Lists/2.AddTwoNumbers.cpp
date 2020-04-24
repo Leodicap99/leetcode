@@ -1,4 +1,4 @@
-The example might seem confusing due to the wordingIts simple to understand.Let me demonstrate
+/*The example might seem confusing due to the wordingIts simple to understand.Let me demonstrate
 2->4->3 + 5->6->4 = 7->0->8
 notice that the addition goes from left to right and so is the carry propagation.
 Thus our algorithm should satisfy the above condition. What we cn do is
@@ -34,6 +34,7 @@ ans=[7,0,8]
 Edge Cases:
 
 1. If the final carry is still there (>0) add it to the list.
+      */
 
    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
         ListNode* dummy=new ListNode(0);
