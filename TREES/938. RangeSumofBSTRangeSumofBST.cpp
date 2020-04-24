@@ -3,9 +3,9 @@ Lets take the binary tree to be [10,5,15,3,7,null,18]
 						
 						10
 						/\
-					   5  15
-					  /\   \
-					 3  7   18
+					       5  15
+					      /\   \
+					     3  7   18
 
 do your inorder traversal as routine
                                                                       sum = 0
