@@ -1,3 +1,4 @@
+/*
 This is can be solved in many ways. The approach i will be taking is greedy. Reason being i can bring down the time complexity
 to o(n).
 Approach:
@@ -27,7 +28,7 @@ here jump will take value 1+0 =1 initially.
 Then it takes 1+1=2 .
 At index 2 it sticks with the original value of jump.
 Finally when it reaches index 3 the jump value<i thus returning false.
-
+*/
     bool canJump(vector<int>& nums) {
         int jump=0;
         for(int i=0;i<nums.size();i++)
