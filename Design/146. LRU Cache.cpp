@@ -1,3 +1,4 @@
+/*
 LRU CACHE->Least Recently Used Cache 
 How it Works:
 
@@ -42,7 +43,7 @@ For put function
    Case 2a: if the cache size if full remove the element and place it at the front of the cache.
    Case 2b: if the cache size is not full we simply place the element at the right location of the previously recently used element.
 
-
+*/
 class LRUCache {
 private:
     int cache_size;
