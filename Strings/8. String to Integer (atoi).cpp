@@ -1,3 +1,4 @@
+/*
 We first keep incrementing i if it encounter whitespaces.
 After this the next character can be either a sign or an integer.Remember once u enter this territory whitesace are not allowed.
 The only difficult part in this problem is to handle the corner cases of numbers exceeding INT+MAX or MIN.
@@ -44,7 +45,7 @@ Check CAVIAT = true Since base value==INT_MAX/10 and str[i] == 8>7
 Thus we return INT_MAX or INT_MIN according to the sign
 
 Remember that this will work if str = "   -2147483648" though the caviat is true cuz it checks the sign and return INT_MIN.
-
+*/
     int myAtoi(string str) {
         int sign=1,base=0;
         int i=0;
