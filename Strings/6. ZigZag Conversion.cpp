@@ -1,3 +1,4 @@
+/*
 All we have to do in this problem is to go down up down up...
 we maintain a bool variable that flips its states once i is at 0 or at numRows-1.
 We simulatneously add to vector array conatining string and later tranfer it to a string.
@@ -26,7 +27,7 @@ if we continuously do this we reach the final desired state
 [APLSIIG]
 [YIR]
 Now we use an auxiliary string that adds the string row wise yielding the final answer.
-
+*/
    string convert(string s, int numRows) {
         if(s.size()==0)return s;
         if(numRows==1)return s;
