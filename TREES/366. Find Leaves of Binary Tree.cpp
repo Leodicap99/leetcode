@@ -17,7 +17,7 @@ map
 
 Then u can use any of ur traversals and push the integer into the mapped location in the matrix.
  _           _
-|  4  5   6   |
+|  4  5   3   |
 |             |
 |     2       |
 |             |
