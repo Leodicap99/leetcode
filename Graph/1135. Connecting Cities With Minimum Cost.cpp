@@ -38,3 +38,35 @@
         }
         return count==N?ans:-1;    //If count is not equal to 0 then we havent met all the cities yet 
     }
+
+/*
+Kruskals Algorithm
+Time complexity:-O(ElogE)
+*/
+
+    int find(int x,vector<int>& parent)
+    {
+        return parent[x]==x?x:find(parent[x],parent);
+    }
+    int minimumCost(int N, vector<vector<int>>& connections) {
+        vector<int> groups(N+1,0);
+        for(int i=0;i<groups.size();i++)groups[i]=i;
+        sort(connections.begin(),connections.end(),[](vector<int> &a,vector<int> &b)
+             {
+                 return a[2]<b[2];
+             });
+        int ans=0,count=0;
+        for(auto &x:connections)
+        {
+            int group1=find(x[0],groups);
+            int group2=find(x[1],groups);
+            if(group1!=group2)
+            {
+                ans+=x[2];
+                groups[group1]=group2;
+                count++;
+                if(count==N-1)return ans;
+            }
+        }
+        return -1;
+    }
