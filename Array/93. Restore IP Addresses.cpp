@@ -22,3 +22,30 @@ public:
         return ans;
     }
 };
+
+
+class Solution {
+public:
+    vector<string> ans;
+    void dfs(string s,int index,string path,int count)
+    {
+        if(count>4)return;
+        if(count==4 && index>=s.length())
+        {
+            path.pop_back();
+            ans.push_back(path);
+            return;
+        }
+        for(int i=1;i<4 && index+i<=s.length();i++)
+        {
+            string t=s.substr(index,i);
+            if((i!=1 && t[0]=='0')||(stoi(t)>=256))continue;
+            dfs(s,index+i,path+t+'.',count+1);
+            
+        }
+    }
+    vector<string> restoreIpAddresses(string s) {
+        dfs(s,0,"",0);
+        return ans;
+    }
+};
