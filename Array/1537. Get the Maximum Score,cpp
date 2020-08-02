@@ -1,0 +1,20 @@
+class Solution {
+public:
+    int maxSum(vector<int>& nums1, vector<int>& nums2) {
+        long long x=0,y=0,i=0,j=0,prevx=0,prevy=0,mod=1e9+7;
+        while(i<nums1.size() && j<nums2.size())
+        {
+            if(nums1[i]<nums2[j])x+=nums1[i++];
+            else if(nums1[i]>nums2[j])y+=nums2[j++];
+            else
+            {
+                x=y=max(prevx+nums1[i++],prevy+nums2[j++]);
+            }
+            prevx=x;
+            prevy=y;
+        }
+        while(i<nums1.size())x+=nums1[i++];
+        while(j<nums2.size())y+=nums2[j++];
+        return max(x,y)%mod;
+    }
+};
